@@ -22,6 +22,8 @@
 		D2BD978624F4EED30009F6A9 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD978524F4EED30009F6A9 /* PracticeViewController.swift */; };
 		D2BD97CA24F587AD0009F6A9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD97C924F587AD0009F6A9 /* DetailsViewController.swift */; };
 		D2BD97CC24F590C30009F6A9 /* IntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD97CB24F590C30009F6A9 /* IntroduceViewController.swift */; };
+		D2E281592514D3AD0086651A /* GrammarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E281582514D3AD0086651A /* GrammarPresenter.swift */; };
+		D2E2815C2514D9CA0086651A /* IntroducePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E2815B2514D9CA0086651A /* IntroducePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		D2BD978524F4EED30009F6A9 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		D2BD97C924F587AD0009F6A9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D2BD97CB24F590C30009F6A9 /* IntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceViewController.swift; sourceTree = "<group>"; };
+		D2E281582514D3AD0086651A /* GrammarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarPresenter.swift; sourceTree = "<group>"; };
+		D2E2815B2514D9CA0086651A /* IntroducePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducePresenter.swift; sourceTree = "<group>"; };
 		EF5FC9276F4324050B6E6D39 /* Pods-JapaneseStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseStudy.release.xcconfig"; path = "Target Support Files/Pods-JapaneseStudy/Pods-JapaneseStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,23 +100,49 @@
 		D2BD976E24F404230009F6A9 /* JapaneseStudy */ = {
 			isa = PBXGroup;
 			children = (
+				D2E281542514D0020086651A /* Top */,
 				D2BD976F24F404230009F6A9 /* AppDelegate.swift */,
 				D2BD977124F404230009F6A9 /* SceneDelegate.swift */,
-				D2BD977324F404230009F6A9 /* ViewController.swift */,
 				D2BD977524F404230009F6A9 /* Main.storyboard */,
 				D2A1C43E2508A9A7001DF336 /* PracticeScoresViewController.swift */,
 				D2A1C43C2504D7AA001DF336 /* PracticeInitialViewController.swift */,
 				D2A1C43A2504C7D6001DF336 /* PracticeContentsViewController.swift */,
 				D23C36E024F96051005A72D2 /* PracticeWorkViewController.swift */,
 				D2BD978524F4EED30009F6A9 /* PracticeViewController.swift */,
-				D2BD97CB24F590C30009F6A9 /* IntroduceViewController.swift */,
+				D2E2815A2514D9620086651A /* GrammarIntroduce */,
 				D2BD97C924F587AD0009F6A9 /* DetailsViewController.swift */,
-				D2BD978324F40C0F0009F6A9 /* GrammarViewController.swift */,
+				D2E281572514D2540086651A /* Chapter */,
 				D2BD977824F404250009F6A9 /* Assets.xcassets */,
 				D2BD977A24F404250009F6A9 /* LaunchScreen.storyboard */,
 				D2BD977D24F404250009F6A9 /* Info.plist */,
 			);
 			path = JapaneseStudy;
+			sourceTree = "<group>";
+		};
+		D2E281542514D0020086651A /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD977324F404230009F6A9 /* ViewController.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		D2E281572514D2540086651A /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD978324F40C0F0009F6A9 /* GrammarViewController.swift */,
+				D2E281582514D3AD0086651A /* GrammarPresenter.swift */,
+			);
+			path = Chapter;
+			sourceTree = "<group>";
+		};
+		D2E2815A2514D9620086651A /* GrammarIntroduce */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD97CB24F590C30009F6A9 /* IntroduceViewController.swift */,
+				D2E2815B2514D9CA0086651A /* IntroducePresenter.swift */,
+			);
+			path = GrammarIntroduce;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E281592514D3AD0086651A /* GrammarPresenter.swift in Sources */,
 				D2A1C43F2508A9A7001DF336 /* PracticeScoresViewController.swift in Sources */,
 				D23C36E124F96051005A72D2 /* PracticeWorkViewController.swift in Sources */,
+				D2E2815C2514D9CA0086651A /* IntroducePresenter.swift in Sources */,
 				D2BD978424F40C0F0009F6A9 /* GrammarViewController.swift in Sources */,
 				D2BD97CC24F590C30009F6A9 /* IntroduceViewController.swift in Sources */,
 				D2BD977424F404230009F6A9 /* ViewController.swift in Sources */,

@@ -122,7 +122,7 @@ class PracticeWorkViewController: UIViewController {
                 performSegue(withIdentifier: "toResult", sender: nil)
                 
                 
-                //                self.percent = "正解率：" + String(self.point*100/self.questionData.count)
+                
                 
             }
             self.indicator.isHidden = true
