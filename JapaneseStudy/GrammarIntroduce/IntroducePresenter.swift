@@ -18,7 +18,19 @@ class IntroducePresenter {
             if !(daTa?.contains(grammarTitle.2))! {
                 daTa?.append(grammarTitle.2)
                 UserDefaults.standard.set(daTa, forKey: String(grammarTitle.1))
+                
+            } else {
+                daTa?.remove(at: grammarTitle.2)
+                UserDefaults.standard.set(daTa, forKey: String(grammarTitle.1))
+                
             }
         }
     }
+    
+    func isNigate(chapterIndex: Int, rowIndex: Int) -> Bool {
+
+        
+        let indexs = UserDefaults.standard.array(forKey: String(chapterIndex)) as? [Int]
+        return indexs?.index(of: rowIndex) != nil
+       }
 }

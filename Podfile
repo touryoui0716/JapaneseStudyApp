@@ -7,4 +7,5 @@ target 'JapaneseStudy' do
 
   # Pods for JapaneseStudy
   pod 'NCMB', :git => 'https://github.com/NIFCLOUD-mbaas/ncmb_swift.git'
+  pod 'Charts'
 end

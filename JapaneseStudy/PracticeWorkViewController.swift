@@ -81,7 +81,7 @@ class PracticeWorkViewController: UIViewController {
         buttonD.setTitle(questionData[i]["answerD"], for: .normal)
         
         
-        // Do any additional setup after loading the view.
+        
     }
     func timerStart() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(PracticeWorkViewController.timerUpdate), userInfo: nil, repeats: true)
@@ -163,7 +163,6 @@ class PracticeWorkViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.timeCount.text = "10"
             self.seconds = 0
-            // your code here
             self.timer?.invalidate()
             self.resultLabel.text = ""
             if self.i < self.questionData.count {
@@ -191,8 +190,6 @@ class PracticeWorkViewController: UIViewController {
                 self.performSegue(withIdentifier: "toResult", sender: nil)
                 
                 
-                //                self.percent = "正解率：" + String(self.point*100/self.questionData.count)
-                
             }
             self.indicator.isHidden = true
             
@@ -200,20 +197,13 @@ class PracticeWorkViewController: UIViewController {
         
         
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toResult" {
             let secondViewController = segue.destination as! PracticeScoresViewController
             secondViewController.grade = String(percent)
             secondViewController.comment = String(comment)
+            secondViewController.point = point*100/questionData.count
         }
     }
     

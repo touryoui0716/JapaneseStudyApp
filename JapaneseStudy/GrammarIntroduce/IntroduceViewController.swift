@@ -25,7 +25,10 @@ class IntroduceViewController: UIViewController {
     
     @IBOutlet weak var buttonTap2: UIButton!
     
-    @IBOutlet weak var buttonTap3: UIButton!
+    @IBOutlet weak var buttonTap3:
+        UIButton!
+    
+    @IBOutlet weak var nigateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,9 @@ class IntroduceViewController: UIViewController {
         label3.numberOfLines = 0
         label4.text = ""
         label4.numberOfLines = 0
+        let nigateButtonTitle: String = presenter.isNigate(chapterIndex: grammarTitle.1, rowIndex: grammarTitle.2) ? "苦手から外す" : "苦手に入れる"
+        print(nigateButtonTitle)
+        nigateButton.setTitle(nigateButtonTitle, for: .normal)
         let rgba = UIColor(red: 255/255, green: 128/255, blue: 168/255, alpha: 1.0) // ボタン背景色設定
         buttonTap1.backgroundColor = rgba
         buttonTap2.backgroundColor = rgba
@@ -57,32 +63,20 @@ class IntroduceViewController: UIViewController {
         buttonTap2.setTitleColor(UIColor.white, for: UIControl.State.normal)
         buttonTap3.setTitleColor(UIColor.white, for: UIControl.State.normal)
         
-
-        // Do any additional setup after loading the view.
+        
     }
     
     
     @IBAction func nigate(_ sender: Any) {
-        
-//        var daTa = UserDefaults.standard.array(forKey: String(grammarTitle.1)) as? [Int]
-//        if daTa == nil {
-//            UserDefaults.standard.set([grammarTitle.2], forKey: String(grammarTitle.1))
-//        } else {
-//            if !(daTa?.contains(grammarTitle.2))! {
-//                daTa?.append(grammarTitle.2)
-//                UserDefaults.standard.set(daTa, forKey: String(grammarTitle.1))
-//            }
-//        }
         presenter.nigate(grammarTitle: grammarTitle)
-        
+        let nigateButtonTitle: String = presenter.isNigate(chapterIndex: grammarTitle.1, rowIndex: grammarTitle.2) ? "苦手から外す" : "苦手に入れる"
+        nigateButton.setTitle(nigateButtonTitle, for: .normal)
+        let nigateButtonColor: UIColor = presenter.isNigate(chapterIndex: grammarTitle.1, rowIndex: grammarTitle.2) ? .gray : .systemBlue
+        nigateButton.setTitleColor(nigateButtonColor, for: .normal)
     }
     
     @IBAction func buttonSetsuzoku(_ sender: Any) {
         label2.text = presenter.grammarDetail[grammarTitle.0]?[0]
-        
-        
-
-       
         
     }
     

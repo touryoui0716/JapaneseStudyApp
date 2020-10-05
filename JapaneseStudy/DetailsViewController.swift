@@ -16,33 +16,34 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var rowChange = 0
     var version = 0
     
-    var grammar: [String] = [] //追加②
-
-    //最初からあるコード
+    var grammar: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if rowChange == 0 {
             if version == 0 {
-                  grammar = ["〜あっての......", "〜いかんだ / いかんでは / 〜いかんによっては", "〜いかんにかかわらず / いかんによらず / いかんをとわず", "〜かたがた", "〜かたわら", "〜がてら", "〜かと思いきや", "〜が早いか", "〜からある / 〜からする / 〜からの", "〜かれ〜かれ"]
+                grammar = ["〜あっての......", "〜いかんだ / いかんでは / 〜いかんによっては", "〜いかんにかかわらず / いかんによらず / いかんをとわず", "〜かたがた", "〜かたわら", "〜がてら", "〜かと思いきや", "〜が早いか", "〜からある / 〜からする / 〜からの", "〜かれ〜かれ"]
             } else {
                 var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                print(daTa?.description)
                 let nigateGrammar = ["〜あっての......", "〜いかんだ / いかんでは / 〜いかんによっては", "〜いかんにかかわらず / いかんによらず / いかんをとわず", "〜かたがた", "〜かたわら", "〜がてら", "〜かと思いきや", "〜が早いか", "〜からある / 〜からする / 〜からの", "〜かれ〜かれ"]
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
                 } else {
                     for i in daTa! {
-                                       grammar.append(nigateGrammar[i])
-                                   }
+                        grammar.append(nigateGrammar[i])
+                    }
                 }
-               
+                
             }
             
-          
+            
         }else if rowChange == 1 {
             if version == 0 {
                 grammar = ["〜きっての", "〜きらいがある", "〜極まる / 〜極まりない", "〜ごとき / ごとく / ごとし", "〜こととて", "〜始末だ", "〜ずくめ", "〜ずにはおかない / 〜ないではおかない", "〜ずにはすまない / 〜ないではすまない", "〜術がない"]
             } else {
                 var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                
                 let nigateGrammar = ["〜きっての", "〜きらいがある", "〜極まる / 〜極まりない", "〜ごとき / ごとく / ごとし", "〜こととて", "〜始末だ", "〜ずくめ", "〜ずにはおかない / 〜ないではおかない", "〜ずにはすまない / 〜ないではすまない", "〜術がない"]
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
@@ -92,8 +93,8 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 grammar = ["〜ながら", "〜なくしては", "〜なくもない", "〜なしに /  〜なしで", "〜ならでは", "〜ないまでも", "〜なり", "〜〜なりとも", "〜なり〜なり", "〜なりに"]
             } else {
                 var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
-
-
+                
+                
                 let nigateGrammar = ["〜ながら", "〜なくしては", "〜なくもない", "〜なしに /  〜なしで", "〜ならでは", "〜ないまでも", "〜なり", "〜〜なりとも", "〜なり〜なり", "〜なりに"]
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
@@ -126,18 +127,18 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
     }
-
-    //最初からあるコード
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    //追加③ セルの個数を指定するデリゲートメソッド（必須）
+    
+    //セルの個数を指定するデリゲートメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return grammar.count
     }
-
-    //追加④ セルに値を設定するデータソースメソッド（必須）
+    
+    //セルに値を設定するデータソースメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -158,15 +159,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }
