@@ -21,9 +21,11 @@ class PracticeScoresViewController: UIViewController {
     
     @IBOutlet weak var commentLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let count = navigationController?.viewControllers.count {
+            navigationController?.viewControllers.remove(at: count - 2)
+        }
         gradeLabel.text = grade
         commentLabel.text = comment
         pieChartsView.centerText = "正答率グラフ"
@@ -66,9 +68,5 @@ class PracticeScoresViewController: UIViewController {
         
         
     }
-    
-    
-    
-     
     
 }

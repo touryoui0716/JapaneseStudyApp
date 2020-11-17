@@ -28,7 +28,7 @@ class GrammarViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     // セルの個数を指定するデリゲートメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.TODO.count
+        return presenter.chapter.count
     }
     
     //セルに値を設定するデータソースメソッド
@@ -36,7 +36,7 @@ class GrammarViewController: UIViewController, UITableViewDelegate, UITableViewD
         // セルを取得する
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         // セルに表示する値を設定する
-        cell.textLabel!.text = presenter.TODO[indexPath.row]
+        cell.textLabel!.text = presenter.chapter[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

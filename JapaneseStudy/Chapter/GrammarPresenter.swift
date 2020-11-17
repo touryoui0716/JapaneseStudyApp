@@ -9,6 +9,6 @@
 import Foundation
 
 class GrammarPresenter {
-    let TODO = ["第一章", "第二章", "第三章", "第四章", "第五章", "第六章"]
+    let chapter = ["第一章", "第二章", "第三章", "第四章", "第五章", "第六章"]
     
 }
