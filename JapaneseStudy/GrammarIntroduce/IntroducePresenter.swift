@@ -28,8 +28,6 @@ class IntroducePresenter {
     }
     
     func isNigate(chapterIndex: Int, rowIndex: Int) -> Bool {
-
-        
         let indexs = UserDefaults.standard.array(forKey: String(chapterIndex)) as? [Int]
         return indexs?.index(of: rowIndex) != nil
        }

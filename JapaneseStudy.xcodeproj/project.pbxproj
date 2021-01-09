@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A3FEFC5F84CD294A713F0A49 /* Pods_JapaneseStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BCBC7B455D924DD491AB8C /* Pods_JapaneseStudy.framework */; };
 		D23C36E124F96051005A72D2 /* PracticeWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23C36E024F96051005A72D2 /* PracticeWorkViewController.swift */; };
+		D24134C6256B99A100B08318 /* PracticePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24134C5256B99A100B08318 /* PracticePresenter.swift */; };
 		D2A1C43B2504C7D6001DF336 /* PracticeContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1C43A2504C7D6001DF336 /* PracticeContentsViewController.swift */; };
 		D2A1C43D2504D7AA001DF336 /* PracticeInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1C43C2504D7AA001DF336 /* PracticeInitialViewController.swift */; };
 		D2A1C43F2508A9A7001DF336 /* PracticeScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1C43E2508A9A7001DF336 /* PracticeScoresViewController.swift */; };
@@ -32,6 +33,7 @@
 		14BCBC7B455D924DD491AB8C /* Pods_JapaneseStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapaneseStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CED7331E1596A452212441D /* Pods-JapaneseStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseStudy.debug.xcconfig"; path = "Target Support Files/Pods-JapaneseStudy/Pods-JapaneseStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		D23C36E024F96051005A72D2 /* PracticeWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeWorkViewController.swift; sourceTree = "<group>"; };
+		D24134C5256B99A100B08318 /* PracticePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticePresenter.swift; sourceTree = "<group>"; };
 		D2A1C43A2504C7D6001DF336 /* PracticeContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeContentsViewController.swift; sourceTree = "<group>"; };
 		D2A1C43C2504D7AA001DF336 /* PracticeInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeInitialViewController.swift; sourceTree = "<group>"; };
 		D2A1C43E2508A9A7001DF336 /* PracticeScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeScoresViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D24134C4256B994900B08318 /* GrammarPractice */ = {
+			isa = PBXGroup;
+			children = (
+				D23C36E024F96051005A72D2 /* PracticeWorkViewController.swift */,
+				D24134C5256B99A100B08318 /* PracticePresenter.swift */,
+			);
+			path = GrammarPractice;
+			sourceTree = "<group>";
+		};
 		D2BD976324F404220009F6A9 = {
 			isa = PBXGroup;
 			children = (
@@ -108,11 +119,11 @@
 				D2BD976F24F404230009F6A9 /* AppDelegate.swift */,
 				D2BD977124F404230009F6A9 /* SceneDelegate.swift */,
 				D2BD977524F404230009F6A9 /* Main.storyboard */,
-				D2A1C43E2508A9A7001DF336 /* PracticeScoresViewController.swift */,
-				D2A1C43C2504D7AA001DF336 /* PracticeInitialViewController.swift */,
-				D2A1C43A2504C7D6001DF336 /* PracticeContentsViewController.swift */,
-				D23C36E024F96051005A72D2 /* PracticeWorkViewController.swift */,
 				D2BD978524F4EED30009F6A9 /* PracticeViewController.swift */,
+				D2A1C43A2504C7D6001DF336 /* PracticeContentsViewController.swift */,
+				D2A1C43C2504D7AA001DF336 /* PracticeInitialViewController.swift */,
+				D24134C4256B994900B08318 /* GrammarPractice */,
+				D2A1C43E2508A9A7001DF336 /* PracticeScoresViewController.swift */,
 				D2E2815A2514D9620086651A /* GrammarIntroduce */,
 				D2BD97C924F587AD0009F6A9 /* DetailsViewController.swift */,
 				D2E281572514D2540086651A /* Chapter */,
@@ -281,6 +292,7 @@
 				D2BD977224F404230009F6A9 /* SceneDelegate.swift in Sources */,
 				D2BD97CA24F587AD0009F6A9 /* DetailsViewController.swift in Sources */,
 				D2A1C43B2504C7D6001DF336 /* PracticeContentsViewController.swift in Sources */,
+				D24134C6256B99A100B08318 /* PracticePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
