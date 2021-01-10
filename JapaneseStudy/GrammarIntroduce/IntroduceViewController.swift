@@ -65,14 +65,34 @@ class IntroduceViewController: UIViewController {
         
         
     }
+    func showAlert() {
+            let alert = UIAlertController(title: "苦手から外しますか？", message: "「はい」を押すと、苦手から外します。", preferredStyle: .alert)
+            let yesAction = UIAlertAction(title: "はい", style: .default, handler: { (UIAlertAction) in
+                print("「はい」が選択されました！")
+                self.isNigateButton()
+            })
+            let noAction = UIAlertAction(title: "いいえ", style: .default, handler: { (UIAlertAction) in
+                print("「いいえ」が選択されました！")
+            })
+            alert.addAction(noAction)
+            alert.addAction(yesAction)
+            
+            present(alert, animated: true, completion: nil)
+        }
     
-    
-    @IBAction func nigate(_ sender: Any) {
+    func isNigateButton() {
         presenter.nigate(grammarTitle: grammarTitle)
         let nigateButtonTitle: String = presenter.isNigate(chapterIndex: grammarTitle.1, rowIndex: grammarTitle.2) ? "苦手から外す" : "苦手に入れる"
         nigateButton.setTitle(nigateButtonTitle, for: .normal)
         let nigateButtonColor: UIColor = presenter.isNigate(chapterIndex: grammarTitle.1, rowIndex: grammarTitle.2) ? .gray : .systemBlue
         nigateButton.setTitleColor(nigateButtonColor, for: .normal)
+    }
+    @IBAction func nigate(_ sender: Any) {
+        if presenter.isNigate(chapterIndex: grammarTitle.1, rowIndex: grammarTitle.2) {
+            showAlert()
+            return
+        }
+        isNigateButton()
     }
     
     @IBAction func buttonSetsuzoku(_ sender: Any) {

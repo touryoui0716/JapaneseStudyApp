@@ -24,7 +24,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             if version == 0 {
                 grammar = nigateGrammar
             } else {
-                var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                let daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
                 
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
@@ -42,7 +42,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             if version == 0 {
                 grammar = nigateGrammar
             } else {
-                var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                let daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
                 
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
@@ -60,7 +60,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             if version == 0 {
                 grammar = nigateGrammar
             } else {
-                var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                let daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
                 
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
@@ -77,7 +77,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             if version == 0 {
                 grammar = nigateGrammar
             } else {
-                var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                let daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
                 
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
@@ -94,7 +94,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             if version == 0 {
                 grammar = nigateGrammar
             } else {
-                var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                let daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
                 
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
@@ -113,7 +113,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             if version == 0 {
                 grammar = nigateGrammar
             } else {
-                var daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
+                let daTa = UserDefaults.standard.array(forKey: String(rowChange)) as? [Int]
                 
                 if daTa == nil {
                     grammar = ["苦手入れなし"]
